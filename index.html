@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <title></title>
 
-    <!-- jQuery -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+
+    <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- google maps - <script type="text/javascript" src="scripts.js"></script>-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpbuXvViKMig1sGUmJjC_GLF0PCXoET3k&callback=initMap" async defer></script>
+
+    <!-- google maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1TSCiV6L80P0PdYJ0QuYEdLKBpr-AgUk&libraries=places" async defer></script>
+
     <!-- cities data -->
     <script type="text/javascript" src="cities.js"></script>
-    <!-- custom js -->
+    <!-- places data -->
+    <script type="text/javascript" src="places.js"></script>
+    <!-- custom JS -->
     <script type="text/javascript" src="scripts.js"></script>
 
-    <title>Google Maps Pratice</title>
+
 </head>
 
 <body>
 
-    <!-- ***MAP*** -->
-    <div class="col-sm-9" id="map"></div>
-    <!-- ***CITIES*** -->
-    <div class="col-sm-3" id="cities-list">
-        <form id="filter-form" type="text" action="">
+    <!-- A place for the map to live -->
+    <div id="map" class="col-sm-9"></div>
+    <!-- A place for the list of cities to live -->
+    <div id="cities-list" class="col-sm-3">
+        <form id="filter-form" type="text">
             <input id="filter-input" type="text">
             <button type="submit" class="btn btn-default">Update the map</button>
         </form>
@@ -42,6 +47,8 @@
             </tbody>
         </table>
     </div>
+
+
 </body>
 
 </html>
